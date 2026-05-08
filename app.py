@@ -9,9 +9,7 @@ import os
 load_dotenv()
 
 # Get API key
-api_key = os.getenv("GEMINI_API_KEY")
-
-# Create Gemini client
+api_key = st.secrets["GEMINI_API_KEY"]
 client = genai.Client(api_key=api_key)
 
 st.title("📄 AI Resume Analyzer")
